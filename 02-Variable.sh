@@ -24,4 +24,13 @@ echo "Please enter your Password:: "
 read -s PASSWORD
 
 echo "Username is: $USERNAME, Password is: $PASSWORD" # I am priting just for validation, you should not print username and passwords in scripts
+echo "/n---------------------------------------------------"
+echo "The unset command directs a shell to delete a variable and its stored data from list of variables."
 
+var1="Devil"
+var2=23
+echo $var1 $var2
+
+unset var1
+
+echo $var1 $var2

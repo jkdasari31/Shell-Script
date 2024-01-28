@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "/n-------------------Type : Date----------------"
+DATE=$(date)
+echo "Script started executing: ${DATE}"
+
+echo "/n-------------------Type : Variable----------------"
+
 PERSON1=Suresh
 PERSON2=Akhil
 
@@ -8,17 +14,14 @@ echo "$PERSON2: Hi $PERSON1, very Good Morning"
 echo "$PERSON1: How are you $PERSON2?"
 echo "$PERSON2: I am good $PERSON1, How are you"
 echo "$PERSON1: yeah, great"
+echo "---------------------------------------------------"
 
-echo "-------------------Type : Date----------------"
-DATE=$(date)
-echo "Script started executing: ${DATE}"
+echo "Please enter your username:: "
 
-echo "-------------------Type : Variable----------------"
+read -s USERNAME #the value entered above will be automatically atteched to USERNAME variable
 
-PERSON1=$1
-PERSON2=$2
+echo "Please enter your Password:: "
+read -s PASSWORD
 
-echo "$PERSON1: Hello $PERSON2, Good Morning"
-echo "$PERSON2: Hi $PERSON1, very Good Morning"
-echo "$PERSON1: How are you $PERSON2?"
-echo "$PERSON2: I am good $PERSON1, How are you"
+echo "Username is: $USERNAME, Password is: $PASSWORD" # I am priting just for validation, you should not print username and passwords in scripts
+

@@ -19,3 +19,33 @@ do
     echo "Deleting file: $line"
     rm -rf $line
 done <<< $FILES_TO_DELETE
+
+
+# #$ sh -x 12-delete-old-log-files.sh
+# + SOURCE_DIR=/tmp/shellscript-logs
+#+ R='\e[31m'
+# + G='\e[32m'
+# + Y='\e[33m'
+# + N='\e[0m'
+# + '[' '!' -d /tmp/shellscript-logs ']'
+# ++ find /tmp/shellscript-logs -type f -mtime +14 -name '*.log'
+# + FILES_TO_DELETE='/tmp/shellscript-logs/user.log
+# /tmp/shellscript-logs/cart.log
+# /tmp/shellscript-logs/jayakrishna.log'
+# + IFS=
+# + read -r line
+# + echo 'Deleting file: /tmp/shellscript-logs/user.log'
+# Deleting file: /tmp/shellscript-logs/user.log
+# + rm -rf /tmp/shellscript-logs/user.log
+# + IFS=
+# + read -r line
+# + echo 'Deleting file: /tmp/shellscript-logs/cart.log'
+# Deleting file: /tmp/shellscript-logs/cart.log
+# + rm -rf /tmp/shellscript-logs/cart.log
+# + IFS=
+# + read -r line
+# + echo 'Deleting file: /tmp/shellscript-logs/jayakrishna.log'
+# Deleting file: /tmp/shellscript-logs/jayakrishna.log
+# + rm -rf /tmp/shellscript-logs/jayakrishna.log
+# + IFS=
+# + read -r line
